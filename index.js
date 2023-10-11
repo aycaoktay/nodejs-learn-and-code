@@ -6,10 +6,10 @@ app.use(express.static('public'));
 app.use(express.static('node_modules'));
 
 const data = [
-  { id: 1, name: "iphone 14", price: "30000 TL", isActive: "true" , imageUrl : "1.jpg" },
-  { id: 2, name: "iphone 15", price: "40000 TL", isActive: "false", imageUrl : "2.jpg" },
-  { id: 3, name: "iphone 16", price: "50000 TL", isActive: "true" , imageUrl : "3.jpg"},
-  { id: 4, name: "iphone 17", price: "60000 TL", isActive: "true" , imageUrl : "1.jpg"},
+  { id: 1, name: "iphone 14", price: "30000 TL", isActive: "true" , imageUrl : "/1.jpg", isHome: "true"},
+  { id: 2, name: "iphone 15", price: "40000 TL", isActive: "false", imageUrl : "/2.jpg" ,isHome: "true" },
+  { id: 3, name: "iphone 16", price: "50000 TL", isActive: "true" , imageUrl : "/3.jpg", isHome: "false"},
+  { id: 4, name: "iphone 17", price: "60000 TL", isActive: "true" , imageUrl : "/1.jpg", isHome: "true"},
 ];
 
 //routes
@@ -20,6 +20,7 @@ app.use("/products/:id", function (req, res) {
 app.use("/products", function (req, res) {
   res.render("products", {
     urunler: data,
+    
   });
 });
 app.use("/", function (req, res) {

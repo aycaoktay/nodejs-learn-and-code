@@ -6,16 +6,32 @@
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
     <title>My Nodejs Work</title>
   </head>
-  <body class="bg-warning">
-    <h1><%= name %></h1>
-    <img src="/images/<%= imageUrl %>" alt="iphone 12" width="100">
-    <p>fiyat : <%= price %></p>
-    <p>
-      <% if (isActive) { %>
-      <span>ürün satışta</span>
-      <%} else { %>
-      <span>ürün satışta değil</span>
-      <% } %>
-    </p>
+  <body>
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12">
+       
+            <div class="card mb-3">
+              <div class="row">
+                <div class="col-4">
+                  <img src="/images/<%=imageUrl%>" alt="" class="img-fluid">
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title"><%=name %></h5>
+                    <p class="card-text"><%=price %></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam pariatur, unde nostrum harum suscipit voluptatem delectus in consequuntur amet.
+                      Modi reiciendis unde fugit odit? Facilis iste nostrum minus illo soluta!</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloribus soluta quasi iure veniam maxime perferendis odio at animi, unde itaque distinctio,
+                        totam asperiores nihil dolor amet porro sequi nam.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+         
+        </div>
+      </div>
+    </div>
   </body>
 </html>
